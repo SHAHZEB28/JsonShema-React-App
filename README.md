@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
+# JSON Schema Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic and responsive user interface for visually creating, editing, and nesting JSON schemas. Built with React, TypeScript, and Vite, this tool provides a real-time JSON preview and a clean, intuitive workflow.
 
-Currently, two official plugins are available:
+**[➡️ Live Demo on Netlify](https://your-netlify-app-url.netlify.app/)** 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+![JSON Schema Builder Screenshot](./public/schema.jpeg)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Dynamic Field Management:** Easily add, edit, and delete schema fields on the fly.
+* **Recursive Nesting:** Create complex data structures with deeply nested objects.
+* **Type Support:** Includes String, Number, Float, Boolean, ObjectId, and Nested (Object) types.
+* **Real-Time JSON Preview:** Instantly see the generated JSON output in a separate tab as you build your schema.
+* **Randomized Preview Values:** Float and Boolean types generate random values in the preview for more realistic mock data.
+* **Responsive Design:** A clean and modern UI that works seamlessly on desktop and mobile devices.
+* **Professional Project Structure:** Code is logically separated into reusable UI components, feature components, and type definitions.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project is built with a modern, professional tech stack:
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+
+## 🚀 Getting Started
+
+To run this project on your local machine, follow these steps:
+
+### Prerequisites
+
+Make sure you have Node.js (v18 or higher) installed on your system.
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-repo-name
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+The application will be available at `http://localhost:5173`.
+
+## 📂 Project Structure
+
+The project is organized with a clear and scalable folder structure to promote maintainability and separation of concerns.
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+src/
+├── components/      # Main feature components
+│   ├── ui/          # Reusable, generic UI components (Button, Card, etc.)
+│   ├── FieldRow.tsx
+│   └── JsonPreview.tsx
+├── types.ts         # Shared TypeScript type definitions
+├── App.tsx          # Main application component (layout and state management)
+└── main.tsx         # Entry point of the application
 ```
