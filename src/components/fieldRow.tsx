@@ -3,9 +3,9 @@ import { useFieldArray, Controller, useWatch, type Control, type UseFieldArrayRe
 import { PlusCircle, Trash2, ChevronDown, ChevronRight } from 'lucide-react';
 
 // Corrected to match the new 'components' folder structure
-import { Button } from './button';
-import { Input } from './input';
-import { Select } from './select';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Select } from './ui/select';
 import type { FormValues } from '../types';
 
 type FieldRowProps = {

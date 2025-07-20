@@ -2,9 +2,9 @@ import { useForm, useFieldArray } from 'react-hook-form';
 import { PlusCircle } from 'lucide-react';
 
 // Import your new, separated components
-import { Button } from './components/button';
-import { Card, CardContent } from './components/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/tabs';
+import { Button } from './components/ui/button';
+import { Card, CardContent } from './components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/ui/tabs';
 import { FieldRow } from './components/fieldRow';
 import { JsonPreview } from './components/jsonPreview';
 import type { FormValues } from './types'; // Import shared types
