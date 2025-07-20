@@ -2,7 +2,7 @@
 
 A dynamic and responsive user interface for visually creating, editing, and nesting JSON schemas. Built with React, TypeScript, and Vite, this tool provides a real-time JSON preview and a clean, intuitive workflow.
 
-**[➡️ Live Demo on Netlify](https://your-netlify-app-url.netlify.app/)** 🚀
+**[➡️ Live Demo on Netlify](https://jsonshema-react-app.netlify.app/)** 🚀
 
 ---
 
